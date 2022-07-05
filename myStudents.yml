@@ -1,0 +1,23 @@
+---
+ - students: 
+    - name: Ashok
+      phone: 9986626619
+      address: 
+       doorno: 67
+       Streetno: 12
+       pincode: 560018
+
+    - name: chandu
+      phone: 9986626620
+      address:
+       doorno: 66
+       Streetno: 45
+       pincode: 560012
+
+    - name: Ravi
+      phone: 998662266
+      address: 
+       doorno: 65
+       Streetno: 46
+       pincode: 560014
+   
