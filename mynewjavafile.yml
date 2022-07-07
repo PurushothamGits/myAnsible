@@ -1,0 +1,10 @@
+---
+- hosts: mywebserver
+  become: yes
+  gather_facts: yes
+  tasks:
+   - name: i want to install new java file
+     apt:
+      name: "{{myjavanewpackonubuntu}}"
+      state: present
+     when: ansible_os_family == "Debian"  
