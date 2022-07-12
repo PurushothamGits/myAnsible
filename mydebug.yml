@@ -10,14 +10,14 @@
      debug: 
        msg: "{{myfirsttaskresult}}"  
 
-   - name: Install git
+   - name: install git
      apt: 
-      name: git
-      state: present
-      when: myfirsttaskresult.stderr =="" 
+       name: git
+       state: present
+     when: myfirsttaskresult.stderr =="" 
 
-   - name: Install tree
+   - name: install tree
      apt:
-      name: tree
-      state: present
-      when: myfirsttaskresult.stderr !=""       
+       name: tree
+       state: present
+     when: myfirsttaskresult.stderr !=""       
