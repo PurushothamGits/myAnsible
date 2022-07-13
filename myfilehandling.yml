@@ -20,10 +20,18 @@
    - name: copy dynamic file in to node side
      template: 
          src: myindexfile.j2
-         dest: /var/www/html/index.html    
+         dest: /var/www/html/index.html  
+     notify: restartwebserver
+           
    #Download Remote file from Internet
    - name: Download remote file
      get_url: 
          url: https://purushotham0522bucket.s3.amazonaws.com/testfile.txt
          dest: /home/ubuntu/testfile.txt
          force_basic_auth: yes    
+
+  handlers:
+  - name: restartwebserver
+    service:
+        name: apache2
+        state: restarted       
