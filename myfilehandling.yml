@@ -29,7 +29,7 @@
          url: https://purushotham0522bucket.s3.amazonaws.com/testfile.txt
          dest: /home/ubuntu/testfile.txt
          force_basic_auth: yes    
-
+  # If we want to reuse the Tasks
   handlers:
   - name: restartwebserver
     systemd:
