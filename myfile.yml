@@ -1,6 +1,6 @@
 ---
     - name: create file
       file: 
-       path: /home/maha/testfile
+       path: /home/ubuntu/testfile
        state: touch
  
