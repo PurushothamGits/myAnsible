@@ -7,7 +7,7 @@
    - name: I want to copy the file from Ansible master to nodes
      copy:
        src: mystatic
-       dest: /home/ubuntu/mystaticfile
+       dest: /home/maha/mystaticfile
 
    - name: I want to install webserver
      apt:
