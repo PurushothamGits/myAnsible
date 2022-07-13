@@ -22,7 +22,7 @@
          src: myindexfile.j2
          dest: /var/www/html/index.html  
      notify: restartwebserver
-           
+
    #Download Remote file from Internet
    - name: Download remote file
      get_url: 
@@ -32,6 +32,6 @@
 
   handlers:
   - name: restartwebserver
-    service:
+    systemd:
         name: apache2
         state: restarted       
