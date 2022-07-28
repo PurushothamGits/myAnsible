@@ -1,0 +1,21 @@
+---
+#Download the Tomcat file
+- name: Download Tomcat tar file
+  get_url:
+    url: https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.22/bin/apache-tomcat-10.0.22.tar.gz
+    dest: /home/ubuntu/apache-tomcat-10.0.22.tar.gz
+    force_basic_auth: yes
+
+# Extract the Tomcat File
+- name: create a folder
+  file:
+    path: /opt/tomcat
+    state: directory
+
+# If we execute linux commad directly as an admin, we are to provide IDEMPOTENTS
+# IDEMPOTENTS is responsible by us or Ansible
+# IDEMPOTENTS means once its create folder , it wont be create second time
+- name: Extract the Tomcat tar file
+  command: 
+      cmd:   sudo tar xzvf /home/ubuntu/apache-tomcat-10.0.22.tar.gz -C /opt/tomcat --strip-components=1  
+      creates: /opt/tomcat/NOTICE
