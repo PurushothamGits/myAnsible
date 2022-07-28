@@ -1,7 +1,7 @@
 ---
-- name: I wnat to create Tomcat user
+- name: I want to create Tomcat user
   user:
-    name:
+    name: tomcat
     shell: /bin/false
     home: /opt/tomcat
     state: present
