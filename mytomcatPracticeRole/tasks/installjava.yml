@@ -7,5 +7,5 @@
 
 - name: Install Open JDK
   apt:
-   name: apt install openjdk-11-jdk
+   name: openjdk-11-jdk
    state: present  
