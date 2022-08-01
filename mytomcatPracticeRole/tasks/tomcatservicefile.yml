@@ -1,0 +1,7 @@
+---
+
+- name: copy tomcat service file in to node file
+  template:
+       src: templates/mytomservice.j2
+       dest: /etc/systemd/system/tomcat.service
+   

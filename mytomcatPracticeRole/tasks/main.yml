@@ -1,2 +1,10 @@
 ---
 # tasks file for mytomcatPracticeRole
+
+- include_tasks: myuser.yml
+- include_tasks: installjava.yml
+- include_tasks: downloads.yml
+- include_tasks: permissions.yml
+- include_tasks: ConfigTomcatAdminUsers.yml
+- include_tasks: tomcatservicefile.yml
+- include_tasks: tomcatstart.yml

@@ -1,0 +1,21 @@
+---
+# Download the file from the web
+- name: Download Tomcat tar file
+  get_url:
+    url: https://downloads.apache.org/tomcat/tomcat-10/v10.0.23/bin/apache-tomcat-10.0.23.tar.gz
+    dest: /home/ubuntu/apache-tomcat-10.0.22.tar.gz
+    force_basic_auth: yes
+
+# create the file which to downloaded in to the path
+- name: create a folder   
+  file:
+    path: /opt/tomcat
+    state: directory
+# If we exceute linux command directly as an admin we have to provide  IDEMPOTENTS
+# IDEMPOTENTS means once if it is create folder , it won't create again or one more time.
+# To extract the files, this tar file should be extracted one time only , from second time it don't need.
+- name: Extract Tomcat Tar file     
+  command:
+      cmd: sudo tar xzvf /home/ubuntu/apache-tomcat-10.0.22.tar.gz -C /opt/tomcat --strip-components=1.
+      creates: /opt/tomcat/NOTICE
+   
