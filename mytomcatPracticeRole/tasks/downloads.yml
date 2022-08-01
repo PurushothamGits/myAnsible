@@ -16,6 +16,6 @@
 # To extract the files, this tar file should be extracted one time only , from second time it don't need.
 - name: Extract Tomcat Tar file     
   command:
-      cmd: sudo tar xzvf /home/ubuntu/apache-tomcat-10.0.22.tar.gz -C /opt/tomcat --strip-components=1.
+      cmd:   sudo tar xzvf /home/ubuntu/apache-tomcat-10.0.22.tar.gz -C /opt/tomcat --strip-components=1  
       creates: /opt/tomcat/NOTICE
    
